@@ -1,0 +1,20 @@
+import * as React from "react";
+import { IconButtonProps } from "./types";
+
+export const IconButton: React.FC<IconButtonProps> = ({ src, alt, size = "md" }) => {
+  const sizeClasses = size === "sm" ? "w-9 h-9" : "w-11 h-11";
+  
+  return (
+    <button 
+      className={`flex overflow-hidden justify-center items-center px-2 ${sizeClasses} border border-solid bg-zinc-300 border-zinc-400 rounded-[32px]`}
+      aria-label={alt}
+    >
+      <img
+        loading="lazy"
+        src={src}
+        alt={alt}
+        className="object-contain self-stretch my-auto w-5 aspect-square"
+      />
+    </button>
+  );
+};

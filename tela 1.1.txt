@@ -1,0 +1,13 @@
+import * as React from "react";
+import { ButtonProps } from "./types";
+
+export function ActionButton({ text, className, onClick }: ButtonProps) {
+  return (
+    <button 
+      onClick={onClick}
+      className={`py-3.5 max-w-full leading-snug whitespace-nowrap bg-zinc-300 w-[152px] ${className}`}
+    >
+      {text}
+    </button>
+  );
+}

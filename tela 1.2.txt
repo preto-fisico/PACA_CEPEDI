@@ -1,0 +1,10 @@
+export interface ButtonProps {
+  text: string;
+  className?: string;
+  onClick?: () => void;
+}
+
+export interface WelcomeButtonsData {
+  text: string;
+  className: string;
+}

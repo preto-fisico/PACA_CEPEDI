@@ -1,0 +1,10 @@
+export interface IconButtonProps {
+  src: string;
+  alt: string;
+  size?: "sm" | "md";
+}
+
+export interface ProfileCardProps {
+  name: string;
+  iconSrc: string;
+}

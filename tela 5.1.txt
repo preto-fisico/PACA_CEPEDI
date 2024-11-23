@@ -1,0 +1,10 @@
+import * as React from "react";
+import { ClassroomHeaderProps } from "./types";
+
+export const ClassroomHeader: React.FC<ClassroomHeaderProps> = ({ title, className }) => {
+  return (
+    <header className={`self-start text-2xl text-center text-white ${className}`}>
+      {title}
+    </header>
+  );
+};

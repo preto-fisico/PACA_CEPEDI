@@ -1,0 +1,33 @@
+import * as React from "react";
+import { IconButton } from "./IconButton";
+import { ProfileHeader } from "./ProfileHeader";
+
+export const ProfileView: React.FC = () => {
+  return (
+    <main className="flex overflow-hidden flex-col pt-4 mx-auto w-full bg-white max-w-[480px]">
+      <section className="flex relative flex-col items-start self-center pb-36 max-w-full aspect-[1.896] w-[364px]">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/da42b40b647a18166f26ac067491bb27e2aa8a84d8463331bab34490330a2153?apiKey=27d4c552af6f4661810a6e909e774667&"
+          alt="Profile cover"
+          className="object-cover absolute inset-0 size-full"
+        />
+        <IconButton src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/c7c0cdbb7546db2e419eca290b5e801be076961dfc7972e74a27e3d742df16b0?apiKey=27d4c552af6f4661810a6e909e774667&" alt="Profile menu" />
+      </section>
+      
+      <section className="flex flex-col px-5 pt-10 pb-96 mt-3.5 w-full bg-cyan-700">
+        <h2 className="self-start text-2xl text-center text-white">TURMA</h2>
+        <ProfileHeader name="Amanda Lima" iconSrc="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/b5f3034a8f341284150654d46b490d3d4f509ebcc5f28c6e687b353372320da7?apiKey=27d4c552af6f4661810a6e909e774667&" />
+      </section>
+      
+      <section className="flex flex-col pb-5 w-full bg-slate-50">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/4c88dbb42b24011d540842834bd9e7f067e949b4daf1a42860991e2895b687e3?apiKey=27d4c552af6f4661810a6e909e774667&"
+          alt="Profile content"
+          className="object-contain w-full aspect-[5.13]"
+        />
+      </section>
+    </main>
+  );
+};

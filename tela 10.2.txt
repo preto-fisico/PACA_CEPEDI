@@ -1,0 +1,12 @@
+import * as React from "react";
+import { SubjectCardProps } from "./types";
+import { IconButton } from "./IconButton";
+
+export function SubjectCard({ title, iconSrc }: SubjectCardProps) {
+  return (
+    <section className="flex gap-5 justify-between self-center px-5 pt-2.5 pb-1 mt-8 w-full bg-white max-w-[340px]">
+      <h2 className="text-3xl text-center text-black">{title}</h2>
+      <IconButton src={iconSrc} alt={`${title} icon`} size="sm" />
+    </section>
+  );
+}

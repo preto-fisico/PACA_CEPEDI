@@ -1,0 +1,45 @@
+import * as React from "react";
+import { BackButton } from "./BackButton";
+import { RegistrationOption } from "./RegistrationOption";
+
+const registrationOptions = [
+  { label: "PROFESSOR" },
+  { label: "ALUNO" },
+  { label: "GESTÃO" },
+  { label: "COMUNIDADE" }
+];
+
+export const UserRegistration: React.FC = () => {
+  return (
+    <main className="flex overflow-hidden flex-col pt-4 mx-auto w-full bg-white max-w-[480px]">
+      <section className="flex relative flex-col items-start self-center pb-36 max-w-full aspect-[1.896] w-[364px]">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/da42b40b647a18166f26ac067491bb27e2aa8a84d8463331bab34490330a2153?apiKey=27d4c552af6f4661810a6e909e774667&"
+          alt="Registration background"
+          className="object-cover absolute inset-0 size-full"
+        />
+        <BackButton 
+          imageUrl="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/f8002931153bd429b427942d02bad7c8c562c3d1b72ac20bc558aaec9b037984?apiKey=27d4c552af6f4661810a6e909e774667&"
+          alt="Back arrow icon"
+        />
+      </section>
+      
+      <section className="flex flex-col px-6 pt-16 pb-32 mt-4 w-full text-3xl text-center text-white bg-cyan-700">
+        <h1 className="self-center text-2xl">
+          Selecione o tipo de cadastro:
+        </h1>
+        
+        {registrationOptions.map((option, index) => (
+          <RegistrationOption
+            key={option.label}
+            label={option.label}
+            className={index === 0 ? "mt-8" : ""}
+          />
+        ))}
+      </section>
+      
+      <footer className="flex w-full bg-blue-400 min-h-[96px]" />
+    </main>
+  );
+};

@@ -1,0 +1,13 @@
+import * as React from "react";
+import { RegistrationOptionProps } from "./types";
+
+export const RegistrationOption: React.FC<RegistrationOptionProps> = ({ label, className = "" }) => {
+  return (
+    <button 
+      className={`px-16 py-1.5 mt-6 whitespace-nowrap bg-blue-400 text-white ${className}`}
+      aria-label={`Register as ${label}`}
+    >
+      {label}
+    </button>
+  );
+};

@@ -1,0 +1,13 @@
+import * as React from "react";
+import { IconButton } from "./IconButton";
+import { ClassroomHeaderProps } from "./types";
+
+export const ClassroomHeader: React.FC<ClassroomHeaderProps> = ({ className, grade }) => (
+  <header className={className}>
+    <h2 className="self-start text-2xl text-center text-white">TURMA</h2>
+    <div className="flex gap-5 justify-between px-3.5 pt-2.5 pb-1 mt-8 w-full bg-white">
+      <h3 className="text-3xl text-center text-black">{grade}</h3>
+      <IconButton src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/f0040a10cf5d68a5a503261322e31b33221d64ad2e0b8fa9f28fabcd970ac312?apiKey=27d4c552af6f4661810a6e909e774667&" alt="Class settings" />
+    </div>
+  </header>
+);

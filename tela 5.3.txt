@@ -1,0 +1,20 @@
+import * as React from "react";
+import { ClassroomHeader } from "./ClassroomHeader";
+import { ClassroomCard } from "./ClassroomCard";
+
+export const ClassroomView: React.FC = () => {
+  return (
+    <main className="flex overflow-hidden flex-col pt-4 mx-auto w-full bg-white max-w-[480px]">
+      <section className="flex shrink-0 self-center max-w-full h-48 w-[366px]" />
+      <section className="flex flex-col px-5 pt-10 pb-96 mt-3.5 w-full bg-cyan-700">
+        <ClassroomHeader title="TURMA" />
+        <ClassroomCard 
+          grade="6º Ano"
+          section="A"
+          iconSrc="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/f0040a10cf5d68a5a503261322e31b33221d64ad2e0b8fa9f28fabcd970ac312?apiKey=27d4c552af6f4661810a6e909e774667&"
+        />
+      </section>
+      <section className="flex w-full bg-blue-400 min-h-[96px]" />
+    </main>
+  );
+};

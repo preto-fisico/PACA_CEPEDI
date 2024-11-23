@@ -1,0 +1,12 @@
+export interface IconButtonProps {
+  src: string;
+  alt: string;
+  onClick?: () => void;
+}
+
+export interface StudentCardProps {
+  name: string;
+  className: string;
+  profileImage: string;
+  coverImage: string;
+}

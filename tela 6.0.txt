@@ -1,0 +1,10 @@
+export interface IconButtonProps {
+  src: string;
+  alt: string;
+  onClick?: () => void;
+}
+
+export interface ClassroomHeaderProps {
+  className: string;
+  grade: string;
+}

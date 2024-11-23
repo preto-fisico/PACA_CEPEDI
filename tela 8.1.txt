@@ -1,0 +1,17 @@
+import * as React from "react";
+import { IconButtonProps } from "./types";
+
+export const IconButton: React.FC<IconButtonProps> = ({ src, alt, onClick }) => (
+  <button
+    onClick={onClick}
+    className="flex overflow-hidden justify-center items-center px-2 w-9 h-9 border border-solid bg-zinc-300 border-zinc-400 rounded-[32px]"
+    aria-label={alt}
+  >
+    <img
+      loading="lazy"
+      src={src}
+      alt={alt}
+      className="object-contain self-stretch my-auto w-5 aspect-square"
+    />
+  </button>
+);

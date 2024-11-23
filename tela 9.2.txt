@@ -1,0 +1,12 @@
+import * as React from "react";
+import { IconButton } from "./IconButton";
+import { ProfileCardProps } from "./types";
+
+export const ProfileCard: React.FC<ProfileCardProps> = ({ name, iconSrc }) => {
+  return (
+    <section className="flex gap-5 justify-between self-center pt-2.5 pr-4 pb-1 pl-2 mt-8 w-full bg-white max-w-[340px]">
+      <h2 className="text-3xl text-center text-black">{name}</h2>
+      <IconButton src={iconSrc} alt={`${name}'s profile icon`} size="sm" />
+    </section>
+  );
+};

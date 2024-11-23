@@ -1,0 +1,31 @@
+import * as React from "react";
+import { InputField } from "./InputField";
+import { Button } from "./Button";
+
+export const LoginForm: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
+  return (
+    <main className="flex overflow-hidden flex-col pt-4 mx-auto w-full text-center text-white bg-white max-w-[480px]">
+      <header className="flex shrink-0 self-center max-w-full h-48 w-[369px]" />
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col px-7 pt-16 pb-28 mt-3.5 w-full text-3xl whitespace-nowrap bg-cyan-700"
+      >
+        <InputField label="Login" type="text" id="login" />
+        <InputField label="Senha" type="password" id="password" />
+        <Button>Entrar</Button>
+      </form>
+      <section className="px-12 pt-5 pb-8 w-full text-xl bg-blue-400">
+        <p>
+          Não tem cadastro na plataforma?{" "}
+          <a href="/register" className="text-blue-800">
+            registre - se agora
+          </a>
+        </p>
+      </section>
+    </main>
+  );
+};

@@ -1,0 +1,12 @@
+import * as React from "react";
+import { IconButton } from "./IconButton";
+import { ProfileHeaderProps } from "./types";
+
+export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ name, iconSrc }) => {
+  return (
+    <header className="flex gap-5 justify-between pt-2.5 pr-4 pb-1 pl-2 mt-8 mb-0 w-full bg-white">
+      <h1 className="text-3xl text-center text-black">{name}</h1>
+      <IconButton src={iconSrc} alt={`${name}'s profile actions`} size="sm" />
+    </header>
+  );
+};

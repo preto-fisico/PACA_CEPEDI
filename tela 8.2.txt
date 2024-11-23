@@ -1,0 +1,37 @@
+import * as React from "react";
+import { IconButton } from "./IconButton";
+import { StudentCardProps } from "./types";
+
+export const StudentCard: React.FC<StudentCardProps> = ({
+  name,
+  className,
+  profileImage,
+  coverImage,
+}) => {
+  return (
+    <article className="flex flex-col px-2 pt-10 pb-5 mt-3.5 w-full bg-cyan-700">
+      <h1 className="self-start text-2xl text-center text-white">{className}</h1>
+      <section className="flex gap-5 justify-between self-center pt-2.5 pr-4 pb-1 pl-2 mt-8 w-full bg-white max-w-[340px]">
+        <h2 className="text-3xl text-center text-black">{name}</h2>
+        <IconButton src={profileImage} alt={`${name}'s profile settings`} />
+      </section>
+      <section className="flex relative flex-col px-3.5 pt-52 pb-28 mt-4 w-full aspect-[1.066]">
+        <img
+          loading="lazy"
+          src={coverImage}
+          alt="Student cover"
+          className="object-cover absolute inset-0 size-full"
+        />
+        <div className="flex relative gap-5 justify-between mb-0 w-full">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/ce9c515f600bba0e6040930568c5faead6c71a1b3ce8843c0d3997e8cce1d6d7?apiKey=27d4c552af6f4661810a6e909e774667&"
+            alt="Navigation icon"
+            className="object-contain shrink-0 my-auto w-5 aspect-square"
+          />
+          <IconButton src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/ff932baf02943c9efc040c478128ddd7f4b1417e981203654905a9c2b4a277b4?apiKey=27d4c552af6f4661810a6e909e774667&" alt="Additional options" />
+        </div>
+      </section>
+    </article>
+  );
+}

@@ -1,0 +1,5 @@
+export interface SubjectCardProps {
+  title: string;
+  iconSrc: string;
+  iconAlt: string;
+}

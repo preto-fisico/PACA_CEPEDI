@@ -1,0 +1,10 @@
+export interface ClassroomHeaderProps {
+  title: string;
+  className?: string;
+}
+
+export interface ClassroomCardProps {
+  grade: string;
+  section: string;
+  iconSrc: string;
+}
