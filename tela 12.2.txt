@@ -1,0 +1,12 @@
+import * as React from "react";
+import { IconButton } from "./IconButton";
+import { SubjectItemProps } from "./types";
+
+export function SubjectItem({ title, iconSrc, iconAlt }: SubjectItemProps) {
+  return (
+    <section className="flex gap-5 justify-between px-5 py-1.5 w-full bg-white">
+      <h2 className="text-3xl text-center text-black">{title}</h2>
+      <IconButton src={iconSrc} alt={iconAlt} />
+    </section>
+  );
+}

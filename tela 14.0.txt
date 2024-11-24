@@ -1,0 +1,12 @@
+export interface IconButtonProps {
+  src: string;
+  alt: string;
+  size?: "sm" | "md";
+  className?: string;
+}
+
+export interface ActivityCardProps {
+  title: string;
+  iconSrc: string;
+  iconAlt: string;
+}

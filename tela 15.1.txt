@@ -1,0 +1,18 @@
+import * as React from 'react';
+import { InputFieldProps } from './types';
+
+export const InputField: React.FC<InputFieldProps> = ({ label, id }) => {
+  return (
+    <>
+      <label htmlFor={id} className="mt-2 ml-4">
+        {label}
+      </label>
+      <div
+        role="textbox"
+        tabIndex={0}
+        id={id}
+        className="flex shrink-0 mt-3.5 max-w-full border border-black border-solid bg-zinc-300 h-[53px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[340px]"
+      />
+    </>
+  );
+};

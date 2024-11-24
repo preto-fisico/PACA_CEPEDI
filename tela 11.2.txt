@@ -1,0 +1,15 @@
+import * as React from "react";
+import { BannerImageProps } from "./types";
+
+export function BannerImage({ src, alt }: BannerImageProps) {
+  return (
+    <div className="flex relative flex-col items-start self-center pb-36 max-w-full aspect-[1.896] w-[364px]">
+      <img
+        loading="lazy"
+        src={src}
+        alt={alt}
+        className="object-cover absolute inset-0 size-full"
+      />
+    </div>
+  );
+}

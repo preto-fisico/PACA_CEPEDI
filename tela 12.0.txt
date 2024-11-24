@@ -1,0 +1,11 @@
+export interface IconButtonProps {
+  src: string;
+  alt: string;
+  size?: "sm" | "lg";
+}
+
+export interface SubjectItemProps {
+  title: string;
+  iconSrc: string;
+  iconAlt: string;
+}

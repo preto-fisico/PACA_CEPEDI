@@ -1,0 +1,11 @@
+export interface IconButtonProps {
+  src: string;
+  alt: string;
+  size?: "sm" | "md";
+  onClick?: () => void;
+}
+
+export interface BannerImageProps {
+  src: string;
+  alt: string;
+}

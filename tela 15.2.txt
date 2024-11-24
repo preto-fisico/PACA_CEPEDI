@@ -1,0 +1,66 @@
+import * as React from 'react';
+import { InputField } from './InputField';
+import { RegistrationFormData } from './types';
+
+export const RegistrationForm: React.FC = () => {
+  const [formData, setFormData] = React.useState<RegistrationFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
+  });
+
+  const formFields = [
+    { id: 'firstName', label: 'Nome' },
+    { id: 'lastName', label: 'Sobrenome' },
+    { id: 'email', label: 'E-mail' },
+    { id: 'password', label: 'Senha' }
+  ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
+  return (
+    <main className="flex overflow-hidden flex-col pt-4 mx-auto w-full bg-white max-w-[480px]">
+      <header className="flex relative flex-col items-start self-center px-0.5 pb-40 max-w-full aspect-[1.906] w-[364px]">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/5044060b07340e6aae288d91ddafe6567cfbe51734b1d40d423ee102b72d8680?apiKey=27d4c552af6f4661810a6e909e774667&"
+          alt=""
+          className="object-cover absolute inset-0 size-full"
+        />
+        <button
+          className="flex overflow-hidden relative justify-center items-center px-2 mb-0 w-9 h-9 border border-solid bg-zinc-300 border-zinc-400 rounded-[32px]"
+          aria-label="Navigation button"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/27d4c552af6f4661810a6e909e774667/95ccbe765f21a8d7410982b8cb04ad9f26f2d81a2d16d6e6aad1ef372ce16356?apiKey=27d4c552af6f4661810a6e909e774667&"
+            alt=""
+            className="object-contain self-stretch my-auto w-5 aspect-square"
+          />
+        </button>
+      </header>
+
+      <form onSubmit={handleSubmit} className="flex flex-col items-start px-4 py-12 mt-3.5 w-full text-3xl text-center text-white whitespace-nowrap bg-cyan-700">
+        <h1 className="self-center text-3xl">Cadastre-se</h1>
+        
+        {formFields.map((field) => (
+          <InputField
+            key={field.id}
+            id={field.id}
+            label={field.label}
+          />
+        ))}
+        
+        <button
+          type="submit"
+          className="w-full px-16 pt-7 pb-12 text-xl text-center text-white whitespace-nowrap bg-blue-400"
+        >
+          CADASTRAR
+        </button>
+      </form>
+    </main>
+  );
+};

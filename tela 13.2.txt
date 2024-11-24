@@ -1,0 +1,12 @@
+import * as React from "react";
+import { ActivityCardProps } from "./types";
+import { IconButton } from "./IconButton";
+
+export function ActivityCard({ title, iconSrc, iconAlt }: ActivityCardProps) {
+  return (
+    <article className="flex gap-5 justify-between self-center px-4 py-1.5 mt-7 w-full bg-white max-w-[340px]">
+      <h2 className="text-3xl text-center text-black">{title}</h2>
+      <IconButton src={iconSrc} alt={iconAlt} size="sm" className="mt-1.5" />
+    </article>
+  );
+}
